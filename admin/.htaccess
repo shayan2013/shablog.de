@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Bitte geben Sie Ihr Passwort ein!"
+AuthUserFile "/var/www/vhosts/mhbjvvqf.host235.checkdomain.de/shablog.de/admin/.htpasswd"
+Require valid-user
