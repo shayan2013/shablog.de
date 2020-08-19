@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title class="hide">My First HTML</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="description" content="just html">
+    <meta name="author" content="Shayan Shams">
+    <meta http-equiv="refresh" content="150">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <![endif]-->
+    <link rel="stylesheet" href="styles/base.css">
+    <style>
+        body {background-color: red;}
+        h1   {color: blue;}
+        p    {color: red;}
+    </style>
+</head>
+<body style="background-color:MediumSeaGreen;">
+<h1 style="font-family:verdana;">My First Heading</h1>
+<button type="button"
+        onclick="document.getElementById('demo').innerHTML = Date()">
+    Click me to display Date and Time.</button>
+<h2 id="demo" style="text-align:center;">Heading 2</h2>
+<h3 id="C4" class="hide">Heading 3</h3>
+
+<!-- navi -->
+<ul>
+    <li><a class="active" href="#home">Home <i class="fa fa-heart"></i></a></li>
+    <li><a href="#news">News <i class="fa fa-file"></i></a></li>
+    <li class="dropdown">
+        <a href="javascript:void(0)" class="dropbtn">Contact <i class="fa fa-bars"></i></a>
+        <div class="dropdown-content">
+            <a href="#">Shayan</a>
+            <a href="#">Josef</a>
+            <a href="#">Tooraj</a>
+        </div>
+    </li>
+    <li style="float:right"><a href="#about">About <i class="fa fa-cloud"></i></a></li>
+</ul>
+
+<h4 class="hide">Heading 4</h4>
+<button onclick="clickCounter()" type="button">Click me!</button>
+<div id="resultcl"></div>
+<h6>Click the button to see the counter increase. your name is <h4 id="loname"></h4> .
+    Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</h6>
+<h5 class="hide">My <span style="color:red">Important</span> Heading</h5>
+<h6>Heading 6</h6>
+<!-- This is a comment -->
+<blockquote cite="http://www.worldwildlife.org/who/index.html">
+    <img src="bilder/logo.jpg" alt="Smiley face" style="float:right;width:42px;height:42px;">
+    This is Blockquote test. For 50 years, WWF has been protecting the future of nature.
+    The world's leading conservation organization,
+    WWF works in 100 countries and is supported by
+    1.2 million members in the United States and
+    close to 5 million globally.
+</blockquote>
+<br>
+<p>The <abbr title="World Health Organization">WHO</abbr> this is abbr test</p>
+
+<!-- multi background -->
+<p id="p01">I am different</p>
+
+<bdo dir="rtl">This text will be written from right to left</bdo>
+
+<!-- border img, background gradients -->
+<pre id="borderimg">
+  This is pre test.
+
+  My Bonnie <small>lies</small> over <del>the</del> sea.
+
+  My  <ins>color</ins> lies <mark>Marked</mark> the ocean.
+
+  Oh, <sub>subscripted</sub> back my <sup>superscripted</sup> to me.
+</pre>
+
+<p style="font-size:60px;background-image:url('bilder/1.jpg')">My first paragraph.</p>
+<p style="color:#FFF"><img src="bilder/logo.jpg" alt="Smiley face" style="float:left;width:42px;height:42px;">I <strong>am</strong> a <b>paragraph</b></p>
+<p title="I'm a tooltip">
+    This <em>is</em> a <i>paragraph</i> with tooltip.
+</p>
+
+<!-- styled button eckig -->
+<div class="title">
+    <a href="#target">Baustellenbedarf</a>
+</div>
+
+<button onclick="hideFunction()">hide</button>
+<button type="button" onclick="alert('Hello World!')">Click Me!</button>
+<hr>
+<a href="http://kryptlog.bplaced.net" target="iframe_a">This is a link to kryptlog</a>
+</br>
+<iframe src="https://www.youtube.com/embed/tgbNymZ7vqY?autoplay=1" style="height:300px;width:460px;" name="iframe_a"></iframe>
+
+<br>
+
+<ul><li><a href="#C4">Jump to Heading 3</a></li></ul>
+<ol type="I">
+    <li id="target">Coffee</li>
+    <li>Tea</li>
+    <li>Milk</li>
+</ol>
+<br>
+
+<!-- image effects -->
+<img id="effekt1" src="bilder/koerper.jpg" width="200px" float="left">
+<img id="effekt2" src="bilder/koerper.jpg" width="200px" float="left">
+<img id="effekt3" src="bilder/koerper.jpg" width="200px" float="left">
+
+<h3>Click the button to get your coordinates.</h3>
+<button onclick="getLocation()">get location</button>
+<h4 id="demo23"></h4>
+<div id="map" style="width:400px;height:400px"></div>
+<br>
+<p>Contact information: <a href="mailto:someone@example.com">
+    someone@example.com</a>.</p>
+
+<!-- center-image & text -->
+<div class="container">
+    <img class="imgCenter" src="bilder/img.jpg" alt="image-center">
+    <div class="centerText"><h2>Centered Text</h2></div>
+</div>
+<!-- float:right , overflow clearfix-->
+<div class="right">
+    <div class="clearfix">
+        <img class="imgClearfix" src="bilder/logo.jpg" alt="clearfix-test" width="100" height="100">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus imperdiet, nulla et dictum interdum...</div>
+</div>
+
+
+<figure>
+    <img src="bilder/map.png" alt="meinKoerper" usemap="#workmap">
+    <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+</figure>
+<map name="workmap">
+    <area shape="rect" coords="130,120,260,250" alt="koerper" href="bilder/koerper.jpg">
+    <area shape="circle" coords="190,70,40" alt="kopf" href="bilder/fc.JPG">
+</map>
+<hr style="border:solid #ff0000 1px;height:1px;">
+
+<hr style="border:dashed #00ff00 1px;
+background-color:#aa0000;height:15px;">
+
+<hr style="border:solid #00ffff 3px;
+background-color:#0000ff;height:10px;width:400px;
+text-align:left;">
+
+<hr style="border:solid #ff0000 1px;
+background-color:#00ffff;height:4px;margin:30px 0px;">
+
+<table>
+    <caption><h2>HTML Table</h2></caption>
+    <tr>
+        <th>Company</th>
+        <th>Contact</th>
+        <th>Country</th>
+    </tr>
+    <tr>
+        <td>Alfreds Futterkiste</td>
+        <td>Maria Anders</td>
+        <td>Germany</td>
+    </tr>
+    <tr>
+        <td>Centro comercial Moctezuma</td>
+        <td>Francisco Chang</td>
+        <td>Mexico</td>
+    </tr>
+    <tr>
+        <td>Ernst Handel</td>
+        <td>Roland Mendel</td>
+        <td>Austria</td>
+    </tr>
+    <tr>
+        <td>Island Trading</td>
+        <td>Helen Bennett</td>
+        <td>UK</td>
+    </tr>
+    <tr>
+        <td>Laughing Bacchus Winecellars</td>
+        <td>Yoshi Tannamuri</td>
+        <td>Canada</td>
+    </tr>
+    <tr>
+        <td>Magazzini Alimentari Riuniti</td>
+        <td>Giovanni Rovelli</td>
+        <td>Italy</td>
+    </tr>
+</table>
+
+<!-- transition -->
+<div id="transition"></div>
+<div id="animation1"></div>
+
+<br>
+<h3>Drag and Drop</h3>
+<h5>Drag the image back and forth between the two div elements.</h5>
+<div id="dragdiv1" ondrop="drop(event)" ondragover="allowDrop(event)">
+    <img src="bilder/logo.jpg" draggable="true" ondragstart="drag(event)" id="drag1" width="88" height="31">
+</div>
+<div id="dragdiv2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+<br><br><br><br>
+<br>
+Canvas :
+<br>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+</canvas>
+<br>
+<br>
+SVG :
+<br>
+<svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="green" stroke-width="4" fill="yellow" />
+</svg>
+<svg width="400" height="180">
+    <rect x="50" y="20" rx="20" ry="20" width="150" height="150"
+          style="fill:red;stroke:black;stroke-width:5;opacity:0.5" />
+</svg>
+<svg width="300" height="200">
+    <polygon points="100,10 40,198 190,78 10,78 160,198"
+             style="fill:lime;stroke:purple;stroke-width:5;fill-rule:evenodd;" />
+</svg>
+<svg height="130" width="500">
+    <defs>
+        <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" style="stop-color:rgb(255,255,0);stop-opacity:1" />
+            <stop offset="100%" style="stop-color:rgb(255,0,0);stop-opacity:1" />
+        </linearGradient>
+    </defs>
+    <ellipse cx="100" cy="70" rx="85" ry="55" fill="url(#grad1)" />
+    <text fill="#ffffff" font-size="45" font-family="Verdana" x="50" y="86">SVG</text>
+    Sorry, your browser does not support inline SVG.
+</svg>
+<br>
+<div style="background-color:black;color:white;padding:20px;">
+    <h2>London</h2>
+    <p>London &#9824; &#65; is &#9827; the &#8482; capital &#174; city &#916; of &Gamma; England. &sum; It is  	&forall; the most &#8706; populous &euro; city in the United Kingdom, with a metropolitan area of over 13 million inhabitants.</p>
+</div>
+
+<script src="js/justHTML.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script>
+</body>
+</html>

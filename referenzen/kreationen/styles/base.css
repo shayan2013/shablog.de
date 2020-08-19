@@ -1,0 +1,325 @@
+:root {
+    --main-bg-color: coral;
+    --main-padding: 15px;
+}
+body {
+    background-color: rgba(76, 175, 80, 0.3);
+    background-image: url("../bilder/koerper.jpg");
+    background-repeat: no-repeat;
+    background-position: right top;
+    background-size: 300px 400px;
+    background-attachment: fixed;
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #4CAF50;
+    outline-style: outset;
+    outline-color: yellow;
+    letter-spacing: -3px;
+    line-height: 0.8;
+    text-shadow: 3px 2px red;
+    font-family: "Times New Roman", Times, serif;
+}
+h4 {
+    text-decoration: line-through;
+    text-transform: capitalize;
+    color: var(--main-bg-color);
+}
+h3 {
+    text-decoration: line-through;
+    text-transform: capitalize;
+    background-color: var(--main-bg-color);
+}
+h3:hover {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+p {
+    color: brown;
+    text-indent: 50px; /*abstand von anfang*/
+    border: 2px;
+    border-style: dotted dashed solid double;
+    border-color: red green blue yellow;
+    border-radius: 10px;
+    text-align: justify; /*streckt zeile so dass ende jeder zeile auf eine linie ist*/
+    padding: 30px;
+    margin: 50px;
+}
+
+#dragdiv1, #dragdiv2 {
+    float: left;
+    width: 100px;
+    height: 35px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    box-shadow: 10px 10px 5px grey;
+}
+
+}
+/* multi background */
+#p01 {
+    background: url(../bilder/fc.JPG) left top no-repeat, url(../bilder/canvas.png) right bottom no-repeat, url(../bilder/border.png) left top repeat;
+    background-size: 50px, 130px, auto;
+    color: #666;
+    overflow: auto;
+}
+
+#zIndex {
+    position: absolute;
+    left: 46%;
+    top: 10px;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+}
+
+.centerText {
+    position: absolute;
+    left: 0;
+    top: 40%;
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    color: #881111;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px red;
+}
+
+:target {
+    border: 2px solid #D4D4D4;
+    background-color: #e5eecc;
+}
+
+.imgCenter {
+    border-radius: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+    opacity: 0.5;
+    filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+.imgCenter:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
+}
+
+/*image effects */
+#effekt1 { -webkit-filter: saturate(7); filter: saturate(7); }
+#effekt2 { -webkit-filter: sepia(100%);filter: sepia(100%); }
+#effekt3 { -webkit-filter: blur(4px);filter: blur(4px); }
+
+
+/* navi */
+li a.active {
+    background-color: #4CAF50;
+    color: red;
+}
+
+li a:hover:not(.active) {
+    background-color: #555;
+    color: green;
+}
+
+li:last-child {
+    background-color: #566;
+}
+
+.dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: #fff;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #555}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+/*clearfix test */
+.clearfix {
+    overflow: auto;
+}
+
+.imgClearfix {
+    float: right;
+}
+
+/* right div */
+.right {
+    position: absolute;
+    right: 0px;
+    width: 300px;
+    border: 3px solid #73AD21;
+    padding: 10px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+/* image border , background gradients*/
+#borderimg {
+    background-color: red; /* For browsers that do not support gradients */
+    background-image: linear-gradient(to bottom right, red, yellow); /* Standard syntax (must be last) */
+    width: 300px;
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(../bilder/border.png) 30 round;
+}
+
+/* transition */
+#transition {
+    width: 100px;
+    height: 100px;
+    background: red;
+    -webkit-transition: width 2s, height 4s, opacity 3s; /* For Safari 3.1 to 6.0 */
+    transition: width 2s, height 4s, opacity 3s;
+}
+
+#transition:hover {
+    width: 300px;
+    height: 300px;
+    opacity: 0.5;
+}
+
+/* animation1 */
+#animation1 {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
+    -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+    -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
+    animation-name: example;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+
+/* Standard syntax */
+@keyframes example {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+}
+/* styled buttun eckig */
+.title {
+    position: relative;
+    width: 120px;
+    padding: 10px 20px 10px 10px;
+    font-size: 20px;
+    color: #FFF;
+    background: #FF0000;
+    cursor: not-allowed;
+}
+.title:after {
+    content: " ";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background: #FF0000;
+    transform-origin: bottom left;
+    -ms-transform: skew(-20deg, 0deg);
+    -webkit-transform: skew(-20deg, 0deg);
+    transform: skew(-20deg, 0deg);
+}
+
+
+/* table */
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #2242f2;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+
+tr:nth-child(even):hover {
+    background-color: #997898;
+}
+
+tr:nth-child(odd):hover {
+    background-color: #900021;
+}
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333333;
+}
+
+ul li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111111;
+}
