@@ -14,13 +14,14 @@
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-4">
+          <a href="../referenzen/bootstrap/index.html">
         <div class="card mb-4">
           <img class="card-img-top" src="images/placeholders/portfolio/aerial-view-color-daylight-1125278.jpg" alt="Platzhalter-Bild">
           <div class="card-body">
-            <h5 class="card-title text-center">Webseiten-Projekt</h5>
+            <h5 class="card-title text-center">Bootstrap-Projekt</h5>
             <h6 class="card-subtitle mb-2 text-muted text-center">Bei einem Großkunden</h6>
           </div>
-        </div>
+        </div></a>
       </div>
       <div class="col-12 col-sm-6 col-md-4">
           <a href="../referenzen/kreationen/index.html">
