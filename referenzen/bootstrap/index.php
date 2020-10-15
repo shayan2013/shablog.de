@@ -46,7 +46,7 @@
 
 <nav class="navbar navbar-default navbar-fixed-top" id="navbar">
     <div class="container-fluid">
-        <!-- Titel und Schalter werden fÃ¼r eine bessere mobile Ansicht zusammengefasst -->
+        <!-- Titel und Schalter werden für eine bessere mobile Ansicht zusammengefasst -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                 <span class="sr-only">Navigation ein-/ausblenden</span>
@@ -57,11 +57,11 @@
             <a class="navbar-brand" href="#">Titel</a>
         </div>
 
-        <!-- Alle Navigationslinks, Formulare und anderer Inhalt werden hier zusammengefasst und kÃ¶nnen dann ein- und ausgeblendet werden -->
+        <!-- Alle Navigationslinks, Formulare und anderer Inhalt werden hier zusammengefasst und können dann ein- und ausgeblendet werden -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#jumbotron">Home <span class="sr-only">(aktuell)</span></a></li>
-                <li><a href="#mehrInfo">Ãœber die App</a></li>
+                <li><a href="#mehrInfo">Über die App</a></li>
                 <li><a href="#footer">App herunterladen</a></li>
 
             </ul>
@@ -85,12 +85,12 @@
         <p>Dies ist warum du dir die App unbedingt herunterladen musst!</p>
         <hr>
 
-        <p>MÃ¶chtest Du mehr Ã¼ber die App erfahren? Dann trage Dich doch in unsere Mailingliste ein.</p>
+        <p>Möchtest Du mehr über die App erfahren? Dann trage Dich doch in unsere Mailingliste ein.</p>
 
         <form class="form-inline">
             <div class="input-group">
                 <span class="input-group-addon">@</span>
-                <input type="email" class="form-control" placeholder="Deine Emailadresse" aria-label="Summe (gerundet zum nÃ¤chsten ganzen Euro)">
+                <input type="email" class="form-control" placeholder="Deine Emailadresse" aria-label="Summe (gerundet zum nächsten ganzen Euro)">
             </div>
             <button class="btn btn-primary">Eintragen</button>
 

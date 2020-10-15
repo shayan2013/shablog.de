@@ -14,7 +14,7 @@
         </div>
       </div>
       <div class="col-12 col-sm-6 col-md-4">
-          <a href="../referenzen/bootstrap/index.html">
+          <a href="../referenzen/bootstrap/index.php">
         <div class="card mb-4">
           <img class="card-img-top" src="images/placeholders/portfolio/aerial-view-color-daylight-1125278.jpg" alt="Platzhalter-Bild">
           <div class="card-body">
