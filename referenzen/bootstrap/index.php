@@ -1,12 +1,88 @@
+<?php
+
+$error = "";
+$successMessage = "";
+
+if($_POST){
+
+
+    if(!$_POST["email"]){
+
+        $error .= "Eine Emailadresse wird benötigt.<br>";
+
+    }
+
+    if(!$_POST["titel"]){
+
+        $error .= "Ein Titel wird benötigt.<br>";
+
+    }
+
+    if(!$_POST["content"]){
+
+        $error .= "Inhalt wird benötigt.<br>";
+
+    }
+
+    if (filter_var($_POST["email"], FILTER_VALIDATE_EMAIL) == false) {
+        $error .= "Die Emailadresse ist ungültig.<br>";
+    }
+
+    if($error != ""){
+
+        $error = '<div class="alert alert-danger" role="alert"><p><b>Es gab fehler in deinem Formular:</b></p>'.$error. '</div>';
+
+    }else{
+
+        $emailTo = "shayan2013@yahoo.com";
+
+        $subject = $_POST['titel'];
+
+        $content = $_POST['content'];
+
+        $headers = "From: ".$_POST['email'];
+
+        if(mail($emailTo, $subject, $content, $headers)){
+
+            $successMessage=  '<div class="alert alert-success" role="alert"><p><b>Alles hat geklappt. Wir antworten dir so schnell wir k&ouml;nnen</b></p></div>';
+
+
+        }else{
+
+            $error = '<div class="alert alert-danger" role="alert"><p><b>Das Formular konnte nicht übertragen werden. Bitte versuche es noch einmal.</b></p></div>';
+
+        }
+
+    }
+
+
+}else{
+
+
+}
+
+
+
+?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap Template</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
+    </script>
     <!-- Bootstrap -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Das neueste kompilierte und minimierte CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <!-- Optionales Theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+    <!-- Das neueste kompilierte und minimierte JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 
     <style>
 
@@ -61,7 +137,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li class="active"><a href="#jumbotron">Home <span class="sr-only">(aktuell)</span></a></li>
-                <li><a href="#mehrInfo">Über die App</a></li>
+                <li><a href="#mehrInfo">&Uuml;ber die App</a></li>
                 <li><a href="#footer">App herunterladen</a></li>
 
             </ul>
@@ -85,7 +161,7 @@
         <p>Dies ist warum du dir die App unbedingt herunterladen musst!</p>
         <hr>
 
-        <p>Möchtest Du mehr über die App erfahren? Dann trage Dich doch in unsere Mailingliste ein.</p>
+        <p>M&ouml;chtest Du mehr &uuml;ber die App erfahren? Dann trage Dich doch in unsere Mailingliste ein.</p>
 
         <form class="form-inline">
             <div class="input-group">
@@ -116,7 +192,8 @@
             <img class="card-img-top" src="vorschau.jpg" alt="...">
             <div class="caption">
                 <h3>Mehr Infos zur App</h3>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
 
 
             </div>
@@ -128,7 +205,8 @@
             <img class="card-img-top" src="vorschau.jpg" alt="...">
             <div class="caption">
                 <h3>Mehr Infos zur App</h3>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
 
 
             </div>
@@ -140,12 +218,48 @@
             <img class="card-img-top" src="vorschau.jpg" alt="...">
             <div class="caption">
                 <h3>Mehr Infos zur App</h3>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
 
 
             </div>
         </div>
     </div>
+</div>
+
+<div class="container" id="kontakt">
+
+    <div class="row">
+
+        <h2>Kontaktformular</h2>
+        <div id="error"><?php
+            echo $successMessage;
+            echo $error;
+
+            ?></div>
+
+
+
+        <form method="post">
+            <div class="form-group">
+                <label for="beispielFeldEmail1">Email-Adresse</label>
+                <input name="email" type="email" class="form-control" id="email" placeholder="Email-Adresse">
+            </div>
+            <div class="form-group">
+                <label for="titel">Titel</label>
+                <input type="text" name="titel" class="form-control" id="titel" >
+            </div>
+
+            <div class="form-group">
+                <label for="anliegen">Deine Frage an uns</label>
+                <textarea class="form-control" name="content" id="content" rows="3"></textarea>
+            </div>
+
+
+            <button type="submit" id="submit" class="btn btn-primary">Abschicken</button>
+        </form>
+    </div>
+
 </div>
 
 <div class="container" id="footer">
@@ -161,12 +275,49 @@
 </div>
 
 
+<script type="text/javascript">
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    $("form").submit(function( event ) {
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-<script>
+        event.preventDefault();
+
+        var error = "";
+
+        if($("#email").val() == ""){
+
+            error += "<p>Der Email ist leer. Bitte trage sie ein.</p>";
+
+        }
+
+        if($("#titel").val() == ""){
+
+            error += "<p>Der Titel ist leer. Bitte trage ihn ein.</p>";
+
+        }if($("#content").val() == "" ){
+
+            error += "<p>Das Inhaltfeld ist leer, bitte trage etwas ein. </p>";
+
+        }
+
+        if(error != ""){
+
+            $("#error").html('<div class="alert alert-danger" role="alert"><p><b>Es gab fehler in deinem Formular:</b></p>' + error + '</div>');
+
+
+        }else{
+            $("#successMessage").html('<div class="alert alert-success" role="alert"><p><b>Alles hat geklappt. Wir antworten dir so schnell wir können</b></p></div>');
+
+            $("form").unbind('submit').submit();
+
+        }
+
+
+    });
+
+
+
 
 </script>
+
 </body>
 </html>
