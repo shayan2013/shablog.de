@@ -5,7 +5,6 @@ $successMessage = "";
 
 if($_POST){
 
-
     if(!$_POST["email"]){
 
         $error .= "Eine Emailadresse wird benötigt.<br>";
@@ -30,7 +29,7 @@ if($_POST){
 
     if($error != ""){
 
-        $error = '<div class="alert alert-danger" role="alert"><p><b>Es gab fehler in deinem Formular:</b></p>'.$error. '</div>';
+        $error = '<div class="alert alert-danger" role="alert"><p><b>Es gab fehler in deinem Formulars:</b></p>'.$error. '</div>';
 
     }else{
 
@@ -55,12 +54,7 @@ if($_POST){
 
     }
 
-
-}else{
-
-
 }
-
 
 
 ?>
@@ -240,7 +234,7 @@ if($_POST){
 
 
 
-        <form method="post">
+        <form id="kontaktForm" method="post">
             <div class="form-group">
                 <label for="beispielFeldEmail1">Email-Adresse</label>
                 <input name="email" type="email" class="form-control" id="email" placeholder="Email-Adresse">
@@ -277,7 +271,7 @@ if($_POST){
 
 <script type="text/javascript">
 
-    $("form").submit(function( event ) {
+    $("#kontaktForm").submit(function( event ) {
 
         event.preventDefault();
 
@@ -305,9 +299,8 @@ if($_POST){
 
 
         }else{
-            $("#successMessage").html('<div class="alert alert-success" role="alert"><p><b>Alles hat geklappt. Wir antworten dir so schnell wir können</b></p></div>');
 
-            $("form").unbind('submit').submit();
+            $("#kontaktForm").unbind('submit').submit();
 
         }
 
