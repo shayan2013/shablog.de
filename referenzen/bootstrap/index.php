@@ -29,7 +29,7 @@ if($_POST){
 
     if($error != ""){
 
-        $error = '<div class="alert alert-danger" role="alert"><p><b>Es gab fehler in deinem Formulars:</b></p>'.$error. '</div>';
+        $error = '<div class="alert alert-danger" role="alert"><p><b>Es gab fehler in deinem Formular:</b></p>'.$error. '</div>';
 
     }else{
 
@@ -183,11 +183,10 @@ if($_POST){
 <div class="row">
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-            <img class="card-img-top" src="vorschau.jpg" alt="...">
+            <a href="kryptlog.php"><img class="card-img-top" src="krypt.jpg" alt="..."></a>
             <div class="caption">
-                <h3>Mehr Infos zur App</h3>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+                <h3>Kryptlog</h3>
+                <p>Eine Seite zum Ver-Entschl&uuml;sseln der Nachrichten mit historischen Verfahren.</p>
 
 
             </div>
@@ -196,11 +195,10 @@ if($_POST){
 
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-            <img class="card-img-top" src="vorschau.jpg" alt="...">
+            <a href="wetter.php"><img class="card-img-top" src="wetter.jpg" alt="..."></a>
             <div class="caption">
-                <h3>Mehr Infos zur App</h3>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+                <h3>Wetter-Api</h3>
+                <p>Eine Api f&uuml;r die Darstellung des Wetters eines Regions. Einfach die Stadt eingeben und die 3-Tage-Verhersage abrufen!</p>
 
 
             </div>
