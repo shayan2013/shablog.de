@@ -99,6 +99,11 @@ if($_POST){
 
         }
 
+        .row {
+            margin-right: 0;
+            margin-left: 0;
+        }
+
         #footer{
 
             background-color:aqua;
@@ -207,11 +212,10 @@ if($_POST){
 
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-            <img class="card-img-top" src="vorschau.jpg" alt="...">
+            <a href="dbtests.php"><img class="card-img-top" src="big-data.jpg" alt="..."></a>
             <div class="caption">
-                <h3>Mehr Infos zur App</h3>
-                <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
-                    labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et</p>
+                <h3>MySQL</h3>
+                <p>Hier sind paar mysql-tests und Funktionen</p>
 
 
             </div>
