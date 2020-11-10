@@ -188,7 +188,7 @@ if($_POST){
 <div class="row">
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-            <a href="kryptlog.php"><img class="card-img-top" src="krypt.jpg" alt="..."></a>
+            <a href="secretDairy/index.php"><img class="card-img-top" src="krypt.jpg" alt="..."></a>
             <div class="caption">
                 <h3>Kryptlog</h3>
                 <p>Eine Seite zum Ver-Entschl&uuml;sseln der Nachrichten mit historischen Verfahren.</p>

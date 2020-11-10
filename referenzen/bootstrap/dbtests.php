@@ -65,7 +65,7 @@ if (array_key_exists('email', $_POST) OR array_key_exists('password', $_POST)) {
 
 <form method="post">
 
-    <input name="name" type="text" placeholder="Emailadresse">
+    <input name="email" type="text" placeholder="Emailadresse">
     <input name="password" type="password" placeholder="Passwort">
     <input type="submit" value="Sign up">
 
