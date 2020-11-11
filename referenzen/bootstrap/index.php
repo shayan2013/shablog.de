@@ -188,10 +188,10 @@ if($_POST){
 <div class="row">
     <div class="col-sm-6 col-md-4">
         <div class="thumbnail">
-            <a href="secretDairy/index.php"><img class="card-img-top" src="krypt.jpg" alt="..."></a>
+            <a href="secretDairy/index.php"><img class="card-img-top" src="carnival.jpg" alt="..."></a>
             <div class="caption">
-                <h3>Kryptlog</h3>
-                <p>Eine Seite zum Ver-Entschl&uuml;sseln der Nachrichten mit historischen Verfahren.</p>
+                <h3>Secret Dairy</h3>
+                <p>Ein geheimes Tagebuch um schöne Erinnerungen einzuspeichern.</p>
 
 
             </div>
