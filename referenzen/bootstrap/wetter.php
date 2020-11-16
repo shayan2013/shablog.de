@@ -17,19 +17,31 @@
         $stadt = $_GET["stadt"];
         $url .= $stadt;
 
-
         //$urt = "http://api.weatherstack.com/current?access_key=d23d6216cca9d3b2e112e8756025721e&query=nh";
         //$ergebnist = file_get_contents($urt);
         //echo $ergebnist;
 
         if(url_check($url)) {
             $ergebnis = file_get_contents($url);
+            //echo $ergebnis;
 
             if (strlen($url) < 150) {
                 $error = "Die Stadt konnte nicht gefunden werden.";
             }
 
+           //$weatherArray = json_decode($url, true);
+           //echo $weatherArray;
+
             $teile = explode(",", $ergebnis);
+
+
+           // $localtime = preg_grep("/^\"localtime\"/i", $teile);
+
+           // $temp = preg_grep("/^\"temperature\"/i", $teile);
+
+           // $wind_speed = preg_grep("/^\"wind_speed\"/i", $teile);
+
+
             foreach ($teile as $key => $value) {
                 if (($key == 11) || ($key == 15) || ($key == 19))
                     $weather .= $value . "<br>";
