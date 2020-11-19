@@ -191,7 +191,7 @@ if($_POST){
             <a href="secretDiary/index.php"><img class="card-img-top" src="carnival.jpg" alt="..."></a>
             <div class="caption">
                 <h3>Secret Dairy</h3>
-                <p>Ein geheimes Tagebuch um schöne Erinnerungen einzuspeichern.</p>
+                <p>Ein geheimes Tagebuch um sch&ouml;ne Erinnerungen einzuspeichern.</p>
 
 
             </div>
