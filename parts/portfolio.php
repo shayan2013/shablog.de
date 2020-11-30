@@ -5,7 +5,7 @@
   
     <div class="row">
       <div class="col-12 col-sm-6 col-md-4">
-          <a href="../referenzen/appjs/index.html">
+          <a href="../referenzen/appJS/index.html">
         <div class="card mb-4">
           <img class="card-img-top" src="images/placeholders/portfolio/media.jpg" alt="Platzhalter-Bild">
           <div class="card-body">
