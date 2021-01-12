@@ -1,18 +1,96 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>HTML5 CSS3</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="styles/clock.css">
+    <title>HTML5 und CSS3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui" charset=utf-8>
+    <link rel="stylesheet" href="app.min.css">
+    <style>
 
-
+    </style>
 </head>
+
 <body>
 
-    <canvas id="clock" width="500" height="500">
+<canvas id="clock" width="500" height="500">
 
-    </canvas>
+    <img src="styles/image3.jpg" id="myface" width="400" height="400">
+</canvas>
+
+
+
+
+<script>
+
+    function setTime(){
+
+        var canvas = document.getElementById("clock");
+        var context = canvas.getContext("2d");
+        var clockRadius = canvas.width/2;
+
+        context.fillStyle = "black";
+
+        context.beginPath();
+        context.arc(clockRadius, clockRadius, clockRadius, 0, 2*Math.PI);
+        context.fill();
+
+        var img = document.getElementById("myface")
+        var pat = context.createPattern(img, 'no-repeat');
+        context.rect(100, 50, 120, 80);
+        context.fillStyle = pat;
+        context.fill();
+
+
+
+        context.fillStyle = "white";
+
+        context.beginPath();
+        context.arc(clockRadius, clockRadius, 10, 0, 2*Math.PI);
+        context.fill();
+
+        context.font = clockRadius /10 + "px arial";
+        context.textAlign = "center";
+        context.textBaseline = "middle";
+
+
+        for (var i= 1; i<=12; i++){
+
+            context.fillText(i, clockRadius + clockRadius * 0.9 * Math.sin(i* 2 * Math.PI/12), clockRadius - (clockRadius * 0.9 * Math.cos(i * 2*Math.PI/12)));
+
+        }
+
+        var hours = new Date().getHours();
+        var minutes = new Date().getMinutes();
+        var seconds = new Date().getSeconds();
+
+        var fullHours = hours %12 + minutes /60 + seconds / 3600;
+
+        var hoursAngel = fullHours * 2 * Math.PI/ 12;
+        var minutesAngel = minutes * 2 * Math.PI/ 60;
+        var secondsAngel = seconds * 2 * Math.PI/ 60;
+
+        context.strokeStyle = "white";
+        context.moveTo(clockRadius, clockRadius);
+        context.lineTo(clockRadius + clockRadius * 0.6 * Math.sin(hoursAngel), clockRadius - (clockRadius * 0.6 * Math.cos(hoursAngel)));
+        context.lineWidth = 5;
+        context.stroke();
+
+        context.moveTo(clockRadius, clockRadius);
+        context.lineTo(clockRadius + clockRadius * 0.8 * Math.sin(minutesAngel), clockRadius - (clockRadius * 0.8 * Math.cos(minutesAngel)));
+        context.lineWidth = 3;
+        context.stroke();
+
+        context.moveTo(clockRadius, clockRadius);
+        context.lineTo(clockRadius + clockRadius * 0.9 * Math.sin(secondsAngel), clockRadius - (clockRadius * 0.9 * Math.cos(secondsAngel)));
+        context.lineWidth = 2;
+        context.stroke();
+
+    }
+
+    setInterval(setTime, 1000);
+
+</script>
+
+
 
 </body>
 </html>
