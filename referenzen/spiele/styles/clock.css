@@ -1,5 +1,7 @@
 
+@media (max-width: 480px) {
 
-#clock {
-    border: 1px solid grey;
+    #clock {
+        max-width: 350px;
+    }
 }
