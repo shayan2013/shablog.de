@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://unpkg.com/vue@next"></script>
+    <title>Vue Js 3</title>
+</head>
+<body>
+    <div id="app">
+        <p>{{hello}}</p>
+        <button id="btn1" v-on:click="add">Addiere</button>
+        <button id="btn2" v-on:click="counter--">Subtrahiere</button>
+        <p>{{counter}}</p>
+        <p class="warning" v-if="this.counter > 200">Warning, Wert zu hoch</p>
+        <p class="okay" v-else>Wert ist okay</p>
+    </div>
+
+</body>
+</html>
+
+<script>
+    Vue.createApp({
+        data: function() {
+            return {
+                hello: "Hello World",
+                counter: 0
+            }
+        },
+
+        methods: {
+            add: function() {
+                if(this.counter > 3) {
+                    this.counter = this.counter * 3
+                } else {
+                    this.counter += 1;
+                }
+            }
+        }
+    }).mount("#app")
+
+</script>
+
+<style>
+    .warning {
+        color: red;
+    }
+
+    .okay {
+        color: green;
+    }
+
+</style>
