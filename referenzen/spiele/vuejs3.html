@@ -23,6 +23,11 @@
         <ul>
             <li v-for="fruit in shoppinglist" v-bind:class="{warning: fruit.sale, okay: !fruit.sale}">{{fruit.item}} für {{fruit.preis}}€</li>
         </ul>
+
+        <ul>
+            <li v-for="fruit in onlySale">{{fruit.item}} für {{fruit.preis}}€</li>
+        </ul>
+
     </div>
 
 </body>
@@ -51,6 +56,12 @@
                 } else {
                     this.counter += 1;
                 }
+            }
+        },
+
+        computed: {
+            onlySale:function() {
+                return this.shoppinglist.filter(product => product.sale)
             }
         }
     }).mount("#app")
